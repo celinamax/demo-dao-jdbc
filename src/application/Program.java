@@ -18,13 +18,12 @@ public class Program {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		Department obj = new Department(1, "Books");
-		
-		Seller seller = new Seller(1, "Noah Maximiano", "noah@gmail.com", new Date(), 4800.0, obj);
 		
 		SellerDao sellerDao = DaoFactory.createSellerDao();
 		
-		System.out.println(obj);
+		Seller seller = sellerDao.findById(3);
+		
+		
 		System.out.println(seller);
 		
 		
